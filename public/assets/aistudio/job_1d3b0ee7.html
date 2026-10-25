@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dream</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: #0a0a0a;
+            color: #f5f5f5;
+            font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1rem 4rem;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #ffffff;
+            text-transform: capitalize;
+        }
+
+        .home-link {
+            font-size: 0.875rem;
+            color: #a3a3a3;
+            text-decoration: none;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            background: #171717;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.2s;
+        }
+
+        .home-link:hover {
+            color: #ffffff;
+            background: #262626;
+        }
+
+        .thumb-box {
+            display: flex;
+            justify-content: center;
+            padding: 1.5rem;
+            background: #141414;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+        }
+
+        .thumb-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .pillar-card {
+            background: #141414;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 180px;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .pillar-card:hover {
+            border-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .pillar-header {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .pillar-content {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fbbf24;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .pillar-img-box {
+            width: 100%;
+            height: 160px;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #1e1e1e;
+        }
+
+        .pillar-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="top-nav">
+            <h1 class="brand">dream</h1>
+            <a href="/" class="home-link">Home</a>
+        </header>
+
+        <div class="thumb-box">
+            <img src="https://keydifferences.com/wp-content/uploads/2016/07/job-vs-work-thumbnail.jpg" alt="job vs work">
+        </div>
+
+        <div class="pillars-grid">
+            <div class="pillar-card">
+                <div class="pillar-header">My skills</div>
+                <div class="pillar-content">&ldquo;Unknown to myself&rdquo;</div>
+            </div>
+
+            <div class="pillar-card">
+                <div class="pillar-header">My plans for the future</div>
+                <div class="pillar-content">Get a stable source of income</div>
+            </div>
+
+            <div class="pillar-card">
+                <div class="pillar-header">dog</div>
+                <div class="pillar-img-box">
+                    <img src="./image_2b3b9978.png" alt="dog">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
