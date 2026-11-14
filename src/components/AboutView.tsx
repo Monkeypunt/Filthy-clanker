@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { ExternalLink } from 'lucide-react';
+import { ServicesSection } from './ServicesSection';
 
 interface AboutViewProps {
   onSwitchToDream?: () => void;
+  onOrderService?: (serviceName: string) => void;
   isCompact?: boolean;
 }
 
@@ -35,7 +37,10 @@ const GAMES = [
   },
 ];
 
-export const AboutView: React.FC<AboutViewProps> = ({ isCompact = false }) => {
+export const AboutView: React.FC<AboutViewProps> = ({
+  onOrderService,
+  isCompact = false,
+}) => {
   const [showDogModal, setShowDogModal] = useState(false);
 
   return (
@@ -117,6 +122,12 @@ export const AboutView: React.FC<AboutViewProps> = ({ isCompact = false }) => {
           ))}
         </div>
       </section>
+
+      {/* Services Section */}
+      <ServicesSection
+        onOrderService={(serviceName) => onOrderService?.(serviceName)}
+        isCompact={isCompact}
+      />
 
       {/* Peanut Image Lightbox / Modal */}
       {showDogModal && (

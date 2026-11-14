@@ -14,6 +14,10 @@
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             min-height: 100vh;
             background-color: #09090b;
@@ -30,13 +34,14 @@
             max-width: 800px;
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         .top-nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 1rem;
             padding-bottom: 1rem;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
@@ -47,21 +52,54 @@
             color: #ffffff;
         }
 
-        .home-btn {
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-link {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #d4d4d8;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .nav-link:hover {
+            color: #ffffff;
+        }
+
+        .home-btn, .contact-btn {
+            font-family: inherit;
             font-size: 0.875rem;
             font-weight: 500;
             padding: 0.4rem 0.8rem;
             border-radius: 6px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .home-btn {
             background-color: #18181b;
             border: 1px solid rgba(255, 255, 255, 0.12);
             color: #e4e4e7;
-            text-decoration: none;
-            transition: all 0.2s ease;
         }
 
         .home-btn:hover {
             background-color: #27272a;
             color: #ffffff;
+        }
+
+        .contact-btn {
+            background-color: #ffffff;
+            border: 1px solid #ffffff;
+            color: #09090b;
+        }
+
+        .contact-btn:hover {
+            background-color: #e4e4e7;
         }
 
         .bio-card {
@@ -113,7 +151,7 @@
             color: #7dd3fc;
         }
 
-        .games-section {
+        .section-block {
             display: flex;
             flex-direction: column;
             gap: 1.25rem;
@@ -165,13 +203,209 @@
             font-weight: 600;
             color: #ffffff;
         }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .service-card {
+            border-radius: 12px;
+            background-color: #121214;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 1.25rem;
+        }
+
+        .service-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .service-price {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fbbf24;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .service-desc {
+            font-size: 0.9rem;
+            color: #a1a1aa;
+            line-height: 1.5;
+        }
+
+        .order-btn {
+            width: 100%;
+            font-family: inherit;
+            font-size: 0.875rem;
+            font-weight: 500;
+            padding: 0.55rem 1rem;
+            border-radius: 8px;
+            background-color: #27272a;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .order-btn:hover {
+            background-color: #3f3f46;
+        }
+
+        .modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(4px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            z-index: 50;
+        }
+
+        .modal-backdrop.open {
+            display: flex;
+        }
+
+        .modal-card {
+            width: 100%;
+            max-width: 440px;
+            background: #18181b;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .modal-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .close-btn {
+            font-family: inherit;
+            font-size: 0.875rem;
+            background: transparent;
+            border: none;
+            color: #a1a1aa;
+            cursor: pointer;
+            padding: 0.25rem 0.5rem;
+        }
+
+        .close-btn:hover {
+            color: #ffffff;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+            margin-bottom: 0.85rem;
+        }
+
+        .form-label {
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: #d4d4d8;
+        }
+
+        .form-input, .form-textarea {
+            font-family: inherit;
+            font-size: 0.875rem;
+            color: #ffffff;
+            background: #09090b;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 8px;
+            padding: 0.55rem 0.75rem;
+            width: 100%;
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .submit-btn {
+            font-family: inherit;
+            font-size: 0.875rem;
+            font-weight: 600;
+            padding: 0.55rem 1rem;
+            border-radius: 8px;
+            background: #ffffff;
+            color: #09090b;
+            border: none;
+            cursor: pointer;
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .status-msg {
+            font-size: 0.875rem;
+            padding: 0.65rem 0.85rem;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .status-msg.success {
+            display: block;
+            color: #34d399;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+        }
+
+        .status-msg.error {
+            display: block;
+            color: #fb7185;
+            background: rgba(244, 63, 94, 0.1);
+            border: 1px solid rgba(244, 63, 94, 0.25);
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header class="top-nav">
             <div class="brand">Ochbadrakh</div>
-            <a href="/" class="home-btn">Home</a>
+            <nav class="nav-links">
+                <a href="#services" class="nav-link">Services</a>
+                <button type="button" id="contact-nav-btn" class="contact-btn">Contact</button>
+                <a href="/" class="home-btn">Home</a>
+            </nav>
         </header>
 
         <section class="bio-card">
@@ -193,7 +427,7 @@
             </div>
         </section>
 
-        <section id="games" class="games-section">
+        <section id="games" class="section-block">
             <h2 class="section-title">Games I Like Playing</h2>
             <div class="games-grid">
                 <a href="https://www.marvelrivals.com/" target="_blank" class="game-card">
@@ -225,6 +459,141 @@
                 </a>
             </div>
         </section>
+
+        <section id="services" class="section-block">
+            <h2 class="section-title">Services</h2>
+            <div id="services-grid" class="services-grid"></div>
+        </section>
     </div>
+
+    <div id="order-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2 id="modal-title" class="modal-title">Contact</h2>
+                <button type="button" id="close-modal-btn" class="close-btn">Close</button>
+            </div>
+
+            <form id="order-form">
+                <div class="form-group">
+                    <label for="field-name" class="form-label">Name *</label>
+                    <input id="field-name" name="name" type="text" required class="form-input" placeholder="Your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="field-contact" class="form-label">Contact *</label>
+                    <input id="field-contact" name="contact" type="text" required class="form-input" placeholder="Phone number or email">
+                </div>
+
+                <div class="form-group">
+                    <label for="field-service" class="form-label">Service</label>
+                    <input id="field-service" name="service" type="text" class="form-input" placeholder="Optional">
+                </div>
+
+                <div class="form-group">
+                    <label for="field-message" class="form-label">Message</label>
+                    <textarea id="field-message" name="message" rows="3" class="form-textarea" placeholder="Additional details"></textarea>
+                </div>
+
+                <p id="form-status" class="status-msg"></p>
+
+                <div class="form-actions">
+                    <button type="button" id="cancel-modal-btn" class="home-btn">Cancel</button>
+                    <button type="submit" id="submit-btn" class="submit-btn">Send Request</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const SERVICES = [
+            {
+                name: 'Nothing',
+                description: 'Nothing at the moment.',
+                price: '$0'
+            }
+        ];
+
+        const servicesGrid = document.getElementById('services-grid');
+        const modal = document.getElementById('order-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const form = document.getElementById('order-form');
+        const nameInput = document.getElementById('field-name');
+        const contactInput = document.getElementById('field-contact');
+        const serviceInput = document.getElementById('field-service');
+        const messageInput = document.getElementById('field-message');
+        const submitBtn = document.getElementById('submit-btn');
+        const statusMsg = document.getElementById('form-status');
+
+        function openModal(serviceName) {
+            serviceInput.value = serviceName || '';
+            modalTitle.textContent = serviceName ? 'Order Service' : 'Contact';
+            statusMsg.className = 'status-msg';
+            statusMsg.textContent = '';
+            modal.classList.add('open');
+        }
+
+        function closeModal() {
+            if (submitBtn.disabled) return;
+            modal.classList.remove('open');
+        }
+
+        servicesGrid.innerHTML = SERVICES.map((s, idx) => `
+            <div class="service-card">
+                <div>
+                    <div class="service-header">
+                        <h3 class="service-name">${s.name}</h3>
+                        <span class="service-price">${s.price}</span>
+                    </div>
+                    <p class="service-desc">${s.description}</p>
+                </div>
+                <button type="button" class="order-btn" data-index="${idx}">Order</button>
+            </div>
+        `).join('');
+
+        servicesGrid.addEventListener('click', (e) => {
+            const btn = e.target.closest('.order-btn');
+            if (!btn) return;
+            const svc = SERVICES[Number(btn.dataset.index)];
+            if (svc) openModal(svc.name);
+        });
+
+        document.getElementById('contact-nav-btn').addEventListener('click', () => openModal(''));
+        document.getElementById('close-modal-btn').addEventListener('click', closeModal);
+        document.getElementById('cancel-modal-btn').addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending request';
+            statusMsg.className = 'status-msg';
+            statusMsg.textContent = '';
+
+            try {
+                const res = await fetch('/api/notify', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        name: nameInput.value.trim(),
+                        contact: contactInput.value.trim(),
+                        service: serviceInput.value.trim(),
+                        message: messageInput.value.trim()
+                    })
+                });
+                if (!res.ok) throw new Error('Request failed');
+                statusMsg.className = 'status-msg success';
+                statusMsg.textContent = 'Request successful, will contact soon';
+                form.reset();
+            } catch {
+                statusMsg.className = 'status-msg error';
+                statusMsg.textContent = 'Request failed, please try again.';
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Request';
+            }
+        });
+    </script>
 </body>
 </html>
