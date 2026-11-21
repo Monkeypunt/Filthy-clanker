@@ -3,10 +3,10 @@ import { ServiceItem } from '../types';
 
 export const SERVICES: ServiceItem[] = [
   {
-    id: 'nothing',
-    name: 'Nothing',
-    description: 'Nothing at the moment.',
-    price: '$0',
+    id: 'coaching',
+    name: 'Coaching in Marvel Rivals or Valorant',
+    description: '1-on-1 coaching session for Marvel Rivals or Valorant.',
+    price: '$1.23',
   },
 ];
 

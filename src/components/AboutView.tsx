@@ -125,29 +125,59 @@ export const AboutView: React.FC<AboutViewProps> = ({
 
       {/* My Projects Section */}
       <section id="projects" className="space-y-4">
-        <div className="flex items-center justify-between gap-4">
-          <h2 className="text-2xl font-bold tracking-tight text-white">
-            My projects
-          </h2>
-          <a
-            href="https://ochbadrakh1.netlify.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs font-medium text-neutral-400 hover:text-white transition-colors"
-          >
-            <span>ochbadrakh1.netlify.app</span>
-            <ExternalLink className="w-3.5 h-3.5" />
-          </a>
-        </div>
+        <h2 className="text-2xl font-bold tracking-tight text-white">
+          My projects
+        </h2>
 
-        <div className="rounded-xl border border-neutral-800 bg-neutral-900/60 overflow-hidden max-w-md">
-          <div className="relative w-full h-64 bg-black">
-            <iframe
-              src="https://ochbadrakh1.netlify.app/"
-              title="My projects preview"
-              loading="lazy"
-              className="w-full h-full border-0"
-            />
+        <div className={`grid grid-cols-1 ${isCompact ? 'sm:grid-cols-1' : 'sm:grid-cols-2'} gap-5`}>
+          <div className="rounded-xl border border-neutral-800 bg-neutral-900/60 overflow-hidden flex flex-col">
+            <div className="px-3.5 py-2 border-b border-neutral-800 flex items-center justify-between gap-2">
+              <span className="text-xs font-medium text-neutral-300 truncate">
+                ochbadrakh1.netlify.app
+              </span>
+              <a
+                href="https://ochbadrakh1.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open ochbadrakh1.netlify.app"
+                className="text-neutral-400 hover:text-white transition-colors shrink-0"
+              >
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </div>
+            <div className="relative w-full h-64 bg-black">
+              <iframe
+                src="https://ochbadrakh1.netlify.app/"
+                title="ochbadrakh1.netlify.app preview"
+                loading="lazy"
+                className="w-full h-full border-0"
+              />
+            </div>
+          </div>
+
+          <div className="rounded-xl border border-neutral-800 bg-neutral-900/60 overflow-hidden flex flex-col">
+            <div className="px-3.5 py-2 border-b border-neutral-800 flex items-center justify-between gap-2">
+              <span className="text-xs font-medium text-neutral-300 truncate">
+                gorgeous-rolypoly-b0c9c7.netlify.app
+              </span>
+              <a
+                href="https://gorgeous-rolypoly-b0c9c7.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open gorgeous-rolypoly-b0c9c7.netlify.app"
+                className="text-neutral-400 hover:text-white transition-colors shrink-0"
+              >
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </div>
+            <div className="relative w-full h-64 bg-black">
+              <iframe
+                src="https://gorgeous-rolypoly-b0c9c7.netlify.app/"
+                title="gorgeous-rolypoly-b0c9c7.netlify.app preview"
+                loading="lazy"
+                className="w-full h-full border-0"
+              />
+            </div>
           </div>
         </div>
       </section>
