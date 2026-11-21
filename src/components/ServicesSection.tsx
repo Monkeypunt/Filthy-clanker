@@ -1,4 +1,5 @@
 import React from 'react';
+import { PawPrint } from 'lucide-react';
 import { ServiceItem } from '../types';
 
 export const SERVICES: ServiceItem[] = [
@@ -21,9 +22,12 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
 }) => {
   return (
     <section id="services" className="space-y-6 scroll-mt-20">
-      <h2 className="text-2xl font-bold tracking-tight text-white">
-        Services
-      </h2>
+      <div className="flex items-center gap-2.5">
+        <PawPrint className="w-5 h-5 text-amber-600 shrink-0" aria-hidden="true" />
+        <h2 className="text-2xl font-bold tracking-tight text-[#231a14]">
+          Services
+        </h2>
+      </div>
 
       <div
         className={`grid grid-cols-1 ${
@@ -33,18 +37,18 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
         {SERVICES.map((service) => (
           <div
             key={service.id}
-            className="rounded-xl border border-neutral-800 bg-neutral-900/60 p-6 flex flex-col justify-between gap-5 hover:border-neutral-700 transition-colors"
+            className="rounded-2xl border border-[#e7dfd5] bg-white p-6 flex flex-col justify-between gap-5 shadow-sm hover:border-amber-400/80 transition-colors"
           >
             <div className="space-y-2">
               <div className="flex items-baseline justify-between gap-4">
-                <h3 className="text-lg font-semibold text-white">
+                <h3 className="text-lg font-semibold text-[#231a14]">
                   {service.name}
                 </h3>
-                <span className="text-base font-semibold text-amber-400 tabular-nums shrink-0">
+                <span className="text-base font-bold text-amber-700 tabular-nums shrink-0">
                   {service.price}
                 </span>
               </div>
-              <p className="text-sm text-neutral-400 leading-relaxed">
+              <p className="text-sm text-[#66574c] leading-relaxed">
                 {service.description}
               </p>
             </div>
@@ -52,7 +56,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
             <button
               type="button"
               onClick={() => onOrderService(service.name)}
-              className="w-full py-2 px-4 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-white text-sm font-medium border border-neutral-700 transition-colors cursor-pointer whitespace-nowrap"
+              className="w-full py-2.5 px-4 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold transition-colors cursor-pointer whitespace-nowrap shadow-xs"
             >
               Order
             </button>

@@ -20,8 +20,9 @@
 
         body {
             min-height: 100vh;
-            background-color: #09090b;
-            color: #f4f4f5;
+            background-color: #faf7f2;
+            background-image: url("data:image/svg+xml,%3Csvg width='72' height='72' viewBox='0 0 72 72' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c8b79f' fill-opacity='0.18'%3E%3Cellipse cx='36' cy='43' rx='7.5' ry='6'/%3E%3Ccircle cx='26' cy='32' r='3'/%3E%3Ccircle cx='33' cy='28' r='3'/%3E%3Ccircle cx='40' cy='28' r='3'/%3E%3Ccircle cx='46' cy='32' r='3'/%3E%3C/g%3E%3C/svg%3E");
+            color: #231a14;
             font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
             display: flex;
             flex-direction: column;
@@ -43,13 +44,13 @@
             align-items: center;
             gap: 1rem;
             padding-bottom: 1rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid #e7dfd5;
         }
 
         .brand {
             font-weight: 700;
             font-size: 1.25rem;
-            color: #ffffff;
+            color: #231a14;
         }
 
         .nav-links {
@@ -61,51 +62,52 @@
         .nav-link {
             font-size: 0.875rem;
             font-weight: 500;
-            color: #d4d4d8;
+            color: #66574c;
             text-decoration: none;
             transition: color 0.2s ease;
         }
 
         .nav-link:hover {
-            color: #ffffff;
+            color: #231a14;
         }
 
         .home-btn, .contact-btn {
             font-family: inherit;
             font-size: 0.875rem;
-            font-weight: 500;
-            padding: 0.4rem 0.8rem;
-            border-radius: 6px;
+            font-weight: 600;
+            padding: 0.45rem 0.9rem;
+            border-radius: 8px;
             text-decoration: none;
             cursor: pointer;
             transition: all 0.2s ease;
         }
 
         .home-btn {
-            background-color: #18181b;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            color: #e4e4e7;
+            background-color: #ffffff;
+            border: 1px solid #e7dfd5;
+            color: #4a3c32;
         }
 
         .home-btn:hover {
-            background-color: #27272a;
-            color: #ffffff;
+            border-color: #f59e0b;
+            color: #231a14;
         }
 
         .contact-btn {
-            background-color: #ffffff;
-            border: 1px solid #ffffff;
-            color: #09090b;
+            background-color: #231a14;
+            border: 1px solid #231a14;
+            color: #faf7f2;
         }
 
         .contact-btn:hover {
-            background-color: #e4e4e7;
+            background-color: #b45309;
+            border-color: #b45309;
         }
 
         .bio-card {
-            border-radius: 14px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            background: #121214;
+            border-radius: 16px;
+            border: 1px solid #e7dfd5;
+            background: #ffffff;
             padding: 2rem;
             display: flex;
             flex-direction: column;
@@ -115,13 +117,13 @@
         h1 {
             font-size: 2rem;
             font-weight: 700;
-            color: #ffffff;
+            color: #231a14;
             margin-bottom: 0.5rem;
         }
 
         .bio-text {
             font-size: 1.05rem;
-            color: #d4d4d8;
+            color: #4a3c32;
             line-height: 1.7;
             display: flex;
             flex-direction: column;
@@ -129,26 +131,27 @@
         }
 
         .dog-link {
-            color: #fbbf24;
+            color: #b45309;
+            font-weight: 600;
             text-decoration: underline;
             text-underline-offset: 3px;
         }
 
         .dog-link:hover {
-            color: #fde68a;
+            color: #d97706;
         }
 
         .games-jump {
             margin-top: 0.25rem;
             display: inline-block;
             font-size: 0.95rem;
-            color: #38bdf8;
+            color: #b45309;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         .games-jump:hover {
-            color: #7dd3fc;
+            color: #d97706;
         }
 
         .section-block {
@@ -160,7 +163,7 @@
         .section-title {
             font-size: 1.5rem;
             font-weight: 700;
-            color: #ffffff;
+            color: #231a14;
         }
 
         .games-grid {
@@ -170,9 +173,9 @@
         }
 
         .game-card {
-            border-radius: 12px;
-            background-color: #121214;
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            background-color: #ffffff;
+            border: 1px solid #e7dfd5;
             overflow: hidden;
             display: flex;
             flex-direction: column;
@@ -183,14 +186,14 @@
 
         .game-card:hover {
             transform: translateY(-3px);
-            border-color: rgba(56, 189, 248, 0.4);
+            border-color: #f59e0b;
         }
 
         .game-thumb {
             width: 100%;
             aspect-ratio: 3/4;
             object-fit: cover;
-            background-color: #27272a;
+            background-color: #f1ebe1;
         }
 
         .game-info {
@@ -201,7 +204,7 @@
         .game-title {
             font-size: 0.95rem;
             font-weight: 600;
-            color: #ffffff;
+            color: #231a14;
         }
 
         .services-grid {
@@ -211,9 +214,9 @@
         }
 
         .service-card {
-            border-radius: 12px;
-            background-color: #121214;
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            background-color: #ffffff;
+            border: 1px solid #e7dfd5;
             padding: 1.5rem;
             display: flex;
             flex-direction: column;
@@ -232,19 +235,19 @@
         .service-name {
             font-size: 1.1rem;
             font-weight: 600;
-            color: #ffffff;
+            color: #231a14;
         }
 
         .service-price {
             font-size: 1rem;
-            font-weight: 600;
-            color: #fbbf24;
+            font-weight: 700;
+            color: #b45309;
             font-variant-numeric: tabular-nums;
         }
 
         .service-desc {
             font-size: 0.9rem;
-            color: #a1a1aa;
+            color: #66574c;
             line-height: 1.5;
         }
 
@@ -252,24 +255,24 @@
             width: 100%;
             font-family: inherit;
             font-size: 0.875rem;
-            font-weight: 500;
+            font-weight: 600;
             padding: 0.55rem 1rem;
-            border-radius: 8px;
-            background-color: #27272a;
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+            background-color: #f59e0b;
+            border: 1px solid #f59e0b;
             color: #ffffff;
             cursor: pointer;
             transition: background-color 0.2s ease;
         }
 
         .order-btn:hover {
-            background-color: #3f3f46;
+            background-color: #d97706;
         }
 
         .modal-backdrop {
             position: fixed;
             inset: 0;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(35, 26, 20, 0.6);
             backdrop-filter: blur(4px);
             display: none;
             align-items: center;
@@ -285,8 +288,8 @@
         .modal-card {
             width: 100%;
             max-width: 440px;
-            background: #18181b;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #fffdf9;
+            border: 1px solid #e7dfd5;
             border-radius: 16px;
             padding: 1.5rem;
             display: flex;
@@ -299,13 +302,13 @@
             justify-content: space-between;
             align-items: center;
             padding-bottom: 0.75rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid #e7dfd5;
         }
 
         .modal-title {
             font-size: 1.1rem;
             font-weight: 700;
-            color: #ffffff;
+            color: #231a14;
         }
 
         .close-btn {
@@ -313,13 +316,13 @@
             font-size: 0.875rem;
             background: transparent;
             border: none;
-            color: #a1a1aa;
+            color: #66574c;
             cursor: pointer;
             padding: 0.25rem 0.5rem;
         }
 
         .close-btn:hover {
-            color: #ffffff;
+            color: #231a14;
         }
 
         .form-group {
@@ -331,24 +334,24 @@
 
         .form-label {
             font-size: 0.78rem;
-            font-weight: 500;
-            color: #d4d4d8;
+            font-weight: 600;
+            color: #4a3c32;
         }
 
         .form-input, .form-textarea {
             font-family: inherit;
             font-size: 0.875rem;
-            color: #ffffff;
-            background: #09090b;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 8px;
+            color: #231a14;
+            background: #faf7f2;
+            border: 1px solid #e2d8cb;
+            border-radius: 10px;
             padding: 0.55rem 0.75rem;
             width: 100%;
         }
 
         .form-input:focus, .form-textarea:focus {
             outline: none;
-            border-color: rgba(255, 255, 255, 0.3);
+            border-color: #f59e0b;
         }
 
         .form-actions {
@@ -363,9 +366,9 @@
             font-size: 0.875rem;
             font-weight: 600;
             padding: 0.55rem 1rem;
-            border-radius: 8px;
-            background: #ffffff;
-            color: #09090b;
+            border-radius: 10px;
+            background: #f59e0b;
+            color: #ffffff;
             border: none;
             cursor: pointer;
         }
@@ -378,22 +381,22 @@
         .status-msg {
             font-size: 0.875rem;
             padding: 0.65rem 0.85rem;
-            border-radius: 8px;
+            border-radius: 10px;
             display: none;
         }
 
         .status-msg.success {
             display: block;
-            color: #34d399;
-            background: rgba(16, 185, 129, 0.1);
-            border: 1px solid rgba(16, 185, 129, 0.25);
+            color: #065f46;
+            background: #ecfdf5;
+            border: 1px solid #a7f3d0;
         }
 
         .status-msg.error {
             display: block;
-            color: #fb7185;
-            background: rgba(244, 63, 94, 0.1);
-            border: 1px solid rgba(244, 63, 94, 0.25);
+            color: #9f1239;
+            background: #fff1f2;
+            border: 1px solid #fecdd3;
         }
     </style>
 </head>
@@ -463,18 +466,18 @@
         <section id="projects" class="section-block">
             <h2 class="section-title">My projects</h2>
             <div class="services-grid">
-                <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);background:#121214;">
-                    <div style="padding:0.5rem 0.75rem;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:center;">
-                        <span style="font-size:0.75rem;color:#d4d4d8;">ochbadrakh1.netlify.app</span>
+                <div style="border-radius:14px;overflow:hidden;border:1px solid #e7dfd5;background:#ffffff;">
+                    <div style="padding:0.5rem 0.75rem;border-bottom:1px solid #e7dfd5;background:#faf7f2;display:flex;justify-content:space-between;align-items:center;">
+                        <span style="font-size:0.75rem;color:#4a3c32;">ochbadrakh1.netlify.app</span>
                         <a href="https://ochbadrakh1.netlify.app/" target="_blank" rel="noopener noreferrer" class="nav-link">&rarr;</a>
                     </div>
                     <div style="background:#000;height:256px;">
                         <iframe src="https://ochbadrakh1.netlify.app/" title="ochbadrakh1.netlify.app preview" loading="lazy" style="width:100%;height:100%;border:0;"></iframe>
                     </div>
                 </div>
-                <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);background:#121214;">
-                    <div style="padding:0.5rem 0.75rem;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:center;">
-                        <span style="font-size:0.75rem;color:#d4d4d8;">gorgeous-rolypoly-b0c9c7.netlify.app</span>
+                <div style="border-radius:14px;overflow:hidden;border:1px solid #e7dfd5;background:#ffffff;">
+                    <div style="padding:0.5rem 0.75rem;border-bottom:1px solid #e7dfd5;background:#faf7f2;display:flex;justify-content:space-between;align-items:center;">
+                        <span style="font-size:0.75rem;color:#4a3c32;">gorgeous-rolypoly-b0c9c7.netlify.app</span>
                         <a href="https://gorgeous-rolypoly-b0c9c7.netlify.app/" target="_blank" rel="noopener noreferrer" class="nav-link">&rarr;</a>
                     </div>
                     <div style="background:#000;height:256px;">
