@@ -123,6 +123,35 @@ export const AboutView: React.FC<AboutViewProps> = ({
         </div>
       </section>
 
+      {/* My Projects Section */}
+      <section id="projects" className="space-y-4">
+        <div className="flex items-center justify-between gap-4">
+          <h2 className="text-2xl font-bold tracking-tight text-white">
+            My projects
+          </h2>
+          <a
+            href="https://ochbadrakh1.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-xs font-medium text-neutral-400 hover:text-white transition-colors"
+          >
+            <span>ochbadrakh1.netlify.app</span>
+            <ExternalLink className="w-3.5 h-3.5" />
+          </a>
+        </div>
+
+        <div className="rounded-xl border border-neutral-800 bg-neutral-900/60 overflow-hidden max-w-md">
+          <div className="relative w-full h-64 bg-black">
+            <iframe
+              src="https://ochbadrakh1.netlify.app/"
+              title="My projects preview"
+              loading="lazy"
+              className="w-full h-full border-0"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <ServicesSection
         onOrderService={(serviceName) => onOrderService?.(serviceName)}

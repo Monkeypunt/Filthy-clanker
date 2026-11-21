@@ -1,5 +1,4 @@
 import React from 'react';
-import { ExternalLink } from 'lucide-react';
 import { ViewMode } from '../types';
 
 interface NavigationProps {
@@ -61,16 +60,6 @@ export const Navigation: React.FC<NavigationProps> = ({
             >
               Side-by-side
             </button>
-
-            <a
-              href="https://ochbadrakh1.netlify.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-3 py-1 text-xs font-medium rounded-md transition-colors whitespace-nowrap shrink-0 text-neutral-400 hover:text-white hover:bg-neutral-800/60 inline-flex items-center gap-1"
-            >
-              <span>My projects</span>
-              <ExternalLink className="w-3 h-3 opacity-70" />
-            </a>
           </div>
 
           <a
